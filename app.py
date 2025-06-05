@@ -47,3 +47,22 @@ def show_menu():
     print("3. Search Contact")
     print("4. Delete Contact")
     print("5. Exit")
+
+# 🔁 Main Loop to keep the program running until user exits
+while True:
+    show_menu()  # Show the menu
+    choice = input("Choose an option (1-5): ")  # Get user choice
+
+    if choice == "1":
+        add_contact()  # Add a contact
+    elif choice == "2":
+        view_contacts()  # View all contacts
+    elif choice == "3":
+        search_contact()  # Search for a contact
+    elif choice == "4":
+        delete_contact()  # Delete a contact
+    elif choice == "5":
+        print("Goodbye!")  # Exit message
+        break  # Exit the loop
+    else:
+        print("Invalid choice. Please try again.\n")  # Handle invalid input
