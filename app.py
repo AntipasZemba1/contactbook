@@ -17,3 +17,15 @@ def view_contacts
         for contact in contacts:
             print(f"Name: {contact['name']}, Phone: {contact['phone']}")  # Display each contact
         print()
+
+# Function to search for a contact by name
+def search_contact():
+    name = input("Enter name to search: ")  # Get name to search
+    found = False
+    for contact in contacts:
+        if contact["name"].lower() == name.lower():  # Case-insensitive match
+            print(f"Found: {contact['name']} - {contact['phone']}\n")  # Show found contact
+            found = True
+            break
+    if not found:
+        print("Contact not found.\n")  # Inform if not found
