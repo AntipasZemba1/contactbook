@@ -29,3 +29,21 @@ def search_contact():
             break
     if not found:
         print("Contact not found.\n")  # Inform if not found
+
+# Function to delete a contact by name
+def delete_contact():
+    name = input("Enter name to delete: ")  # Get name to delete
+    for contact in contacts:
+        if contact["name"].lower() == name.lower():  # Case-insensitive match
+            contacts.remove(contact)  # Remove contact from list
+            print("Contact deleted.\n")
+            return
+
+# Function to display the menu
+def show_menu():
+    print("📱 Contact Book")
+    print("1. Add Contact")
+    print("2. View Contacts")
+    print("3. Search Contact")
+    print("4. Delete Contact")
+    print("5. Exit")
